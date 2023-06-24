@@ -19,6 +19,9 @@
 
 // SDL2 libraries
 #include <SDL2/SDL.h>
+#include <SDL2_ttf/SDL_ttf.h>
+#include <SDL2_mixer/SDL_mixer.h>
+#include <SDL2_image/SDL_image.h>
 
 #ifdef FUSE_EXPORT
   #ifdef _MSC_VER

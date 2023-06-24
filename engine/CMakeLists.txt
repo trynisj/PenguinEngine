@@ -18,8 +18,12 @@ endif (WIN32)
 # unix platform
 if (UNIX)
   find_package(SDL2 REQUIRED)
+  find_package(SDL2_ttf REQUIRED)
+  find_package(SDL2_mixer REQUIRED)
+  find_package(SDL2_image REQUIRED)
   target_include_directories(${PROJECT_NAME} PUBLIC ${SDL2_INCLUDE_DIRS})
-  target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES})
+  target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES} ${SDL2IMAGE_LIBRARIES})
+  target_link_libraries(${PROJECT_NAME} ${SDL_TTF_LIBRARIES} ${SDL2MIXER_LIBRARIES})
 endif(UNIX)
 
 # precompile headers
